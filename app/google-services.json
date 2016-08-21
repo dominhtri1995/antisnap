@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "840201298726",
+    "firebase_url": "https://antisnap-c8275.firebaseio.com",
+    "project_id": "antisnap-c8275",
+    "storage_bucket": "antisnap-c8275.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840201298726:android:c4567b117a8dde65",
+        "android_client_info": {
+          "package_name": "com.financialwhirlpool.antisnap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "840201298726-8u2mlup7hrdtdgalf93uo7hpn7a6bfds.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAV59P9CUKdZjF316A4l8Mw_0CSiakiiZ8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

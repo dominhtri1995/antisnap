@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Camera" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Gallery" />
+        <item
+            android:id="@+id/friend_request"
+            android:icon="@drawable/friendrequest"
+            android:title="Friend Request" />
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Settings" />
+    </group>
+
+    <item android:title="Account">
+        <menu>
+            <item
+                android:id="@+id/my_acount"
+                android:icon="@drawable/myaccount"
+                android:title="My Account" />
+            <item
+                android:id="@+id/sign_out"
+                android:icon="@drawable/signout"
+                android:title="Sign Out" />
+        </menu>
+    </item>
+
+</menu>
