@@ -522,7 +522,7 @@ public class MainActivity extends AppCompatActivity
         ComponentName cn = new ComponentName(this, MainActivity.class);
         searchView.setSearchableInfo(searchManager.getSearchableInfo(cn));
 
-        searchView.setQueryHint("Search friend by name,email or uid");
+        searchView.setQueryHint("Search friend by name,email");
 
         searchView.setOnQueryTextFocusChangeListener(new View.OnFocusChangeListener() {
             @Override

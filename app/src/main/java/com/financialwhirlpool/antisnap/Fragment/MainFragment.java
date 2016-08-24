@@ -197,10 +197,7 @@ public class MainFragment extends Fragment {
                                         final Friend friend = dataSnapshot.getValue(Friend.class);
                                         friend.setUid(friendUid);
 
-                                        Friend friend1 = realm.where(Friend.class)
-                                                .equalTo("uid", friendUid)
-                                                .findFirst();
-                                        if (friend1 == null) {
+
                                             realm.executeTransaction(new Realm.Transaction() {
                                                 @Override
                                                 public void execute(Realm realm) {
@@ -210,7 +207,6 @@ public class MainFragment extends Fragment {
 
                                                 }
                                             });
-                                        }
                                         if (friendList.size() == friendCount)
                                             subscriber.onCompleted();
                                     }
@@ -259,11 +255,8 @@ public class MainFragment extends Fragment {
                 ImageMessage imageMessage = dataSnapshot.getValue(ImageMessage.class);
                 imageMessage.setKeyMessage(dataSnapshot.getKey());
 
-                RealmResults<ImageMessage> queryMessageOld = realm.where(ImageMessage.class).findAll();
                 realm.beginTransaction();
                 ImageMessage im = realm.copyToRealmOrUpdate(imageMessage);
-                RealmResults<ImageMessage> queryMessageNew = realm.where(ImageMessage.class).findAll();
-                if (queryMessageOld.size() < queryMessageNew.size()) {
                     for (Friend friend : friendList) {
                         if (friend.getUid().equals(imageMessage.getSender())) {
 
@@ -278,7 +271,6 @@ public class MainFragment extends Fragment {
                             Log.i("trido", "sender not found");
                         }
                     }
-                }
                 realm.commitTransaction();
             }
 
